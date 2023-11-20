@@ -1,0 +1,11 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  call-release:
+    uses: penguineer/cleanURI/.github/workflows/reusable-release.yml@main
+    secrets: inherit
